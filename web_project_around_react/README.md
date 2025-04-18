@@ -1,12 +1,24 @@
-# React + Vite
+# Around The U.S. — Projeto React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de um site interativo de fotos, desenvolvido com **React** e configurado com **Vite**. A ideia principal é permitir que usuários editem seu perfil, adicionem e removam cartões com imagens, e visualizem as fotos em destaque.
 
-Currently, two official plugins are available:
+## 🧱 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- HTML5
+- CSS3 (com BEM)
+- JavaScript moderno (ES6+)
 
-## Expanding the ESLint configuration
+## 🎯 Funcionalidades principais
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Visualização de perfil e edição de dados
+- ✅ Adição de novos cartões (com título e imagem)
+- ✅ Exclusão de cartões
+- ✅ Curtir imagens
+- ✅ Visualização de imagem em destaque (popup)
+- ✅ Componentização total da interface
+- ✅ Utilização de dados fictícios (mock data) para simular conteúdo dinâmico
+
+## 🗂️ Estrutura de diretórios
+
