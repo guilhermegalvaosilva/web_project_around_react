@@ -1,23 +1,31 @@
 // src/components/Card/Card.jsx
 import React from "react";
-import deleteIcon from "../Card/Trash.svg"; // Supondo que você tenha um ícone
+import trashIcon from "../Card/Trash.svg";
+import infoIcon from "../Card/Vectorheart.svg";
 
-function Card({ card, onCardClick }) {
+function Card({ card, handleDeleteCard }) {
+  function deleteCard() {
+    handleDeleteCard(card);
+  }
+
   return (
-    <div className="card__content">
+    <li className="card__content">
+      <img className="card__image" src={card.link} alt={card.name} />
       <img
-        className="card__image"
-        src={card.link}
-        alt={card.name}
-        onClick={() => onCardClick(card)}
+        className="card__trash-icon"
+        src={trashIcon}
+        alt="ícone de lixeira"
+        onClick={deleteCard}
       />
-      <div className="card__info-title ">
-        <h2 className="card__title">{card.name}</h2>
-        <button className="card__trash-icon">
-          <img src={deleteIcon} alt="Delete icon" />
-        </button>
+      <div className="card__info">
+        <p className="card__info-title">{card.name}</p>
+        <img
+          className="card__info-icon"
+          src={infoIcon}
+          alt="coração vazado com borda preta"
+        />
       </div>
-    </div>
+    </li>
   );
 }
 
