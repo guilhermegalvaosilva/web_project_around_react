@@ -1,11 +1,15 @@
 import React from "react";
-import Logo from "../images/Vector.svg";
+import Logo from "../Header/Vector.svg";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__content">
-        <img src={Logo} alt="Logo Around The U.S." className="header__logo" />
+        <img
+          className="header__logo"
+          src={Logo}
+          alt="escrita Around The U.S."
+        />
       </div>
       <hr className="header__line" />
     </header>
@@ -13,4 +17,3 @@ function Header() {
 }
 
 export default Header;
-// import React from 'react';
