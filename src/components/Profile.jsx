@@ -1,7 +1,7 @@
 import React from "react";
-import Sinal from "../images/IconeAddButton.svg";
-import Lapis from "../images/IconeCanetaVector.svg";
-import Edição from "../images/IconeCanetaEditor.svg";
+import Signal from "../images/IconeAddButton.svg";
+import Pencil from "../images/IconeCanetaVector.svg";
+import Edit from "../images/IconeCanetaEditor.svg";
 import Perfil from "../images/profileimage.jpg";
 
 function Profile({ onEditProfile, onAddPlace, onEditAvatar }) {
@@ -16,7 +16,7 @@ function Profile({ onEditProfile, onAddPlace, onEditAvatar }) {
         <button className="content__editbtn">
           <img
             className="content__edit-icon"
-            src={Edição}
+            src={Edit}
             alt="ícone de edição"
           />
         </button>
@@ -27,7 +27,7 @@ function Profile({ onEditProfile, onAddPlace, onEditAvatar }) {
           <button className="content__button" onClick={onEditProfile}>
             <img
               className="content__button-icon"
-              src={Lapis}
+              src={Pencil}
               alt="ícone de lápis branco"
             />
           </button>
@@ -37,7 +37,7 @@ function Profile({ onEditProfile, onAddPlace, onEditAvatar }) {
       <button className="content__addbutton" onClick={onAddPlace}>
         <img
           className="content__addbutton-icon"
-          src={Sinal}
+          src={Signal}
           alt="sinal de mais"
         />
       </button>

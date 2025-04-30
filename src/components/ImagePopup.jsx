@@ -1,13 +1,18 @@
-import Fechar from "../images/CloseIcon.svg";
-function ImagePopup({ card, onClose }) {
+import closeIcon from "../images/CloseIcon.svg";
+
+function ImagePopup() {
   return (
-    <div className={`popup ${card ? "popup_opened" : ""}`}>
+    <div className="imagepopup">
       <div className="imagepopup__overlay">
-        <button className="imagepopup__close-button" onClick={onClose}>
-          <img className="imagepopup__close-icon" src={Fechar} alt="Fechar" />
+        <button className="imagepopup__close-button">
+          <img
+            className="imagepopup__close-icon"
+            src={closeIcon}
+            alt="duas retas cruzadas na diagonal formando a letra X"
+          />
         </button>
-        <img className="imagepopup__image" src={card?.link} alt={card?.name} />
-        <p className="imagepopup__title">{card?.name}</p>
+        <img className="imagepopup__image" alt="" />
+        <p className="imagepopup__title">Local Aqui</p>
       </div>
     </div>
   );
