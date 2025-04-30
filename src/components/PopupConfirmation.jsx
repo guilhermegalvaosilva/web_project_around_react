@@ -1,4 +1,4 @@
-import Popup from "./Popup";
+import Popup from "./Popup/Popup";
 
 function PopupConfirmation({ isOpen, onClose, onConfirm }) {
   return (

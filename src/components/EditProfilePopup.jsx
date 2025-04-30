@@ -1,4 +1,4 @@
-import Popup from "./Popup";
+import Popup from "./Popup/Popup";
 
 function EditProfilePopup({ isOpen, onClose }) {
   return (
