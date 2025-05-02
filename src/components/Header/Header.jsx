@@ -1,5 +1,4 @@
-import React from "react";
-import Logo from "../Header/Vector.svg";
+import vectorIcon from "../../images/Vector.svg";
 
 function Header() {
   return (
@@ -7,7 +6,7 @@ function Header() {
       <div className="header__content">
         <img
           className="header__logo"
-          src={Logo}
+          src={vectorIcon}
           alt="escrita Around The U.S."
         />
       </div>

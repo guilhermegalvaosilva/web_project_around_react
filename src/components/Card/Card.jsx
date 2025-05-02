@@ -1,7 +1,5 @@
-// src/components/Card/Card.jsx
-import React from "react";
-import trashIcon from "../Card/Trash.svg";
-import infoIcon from "../Card/Vectorheart.svg";
+import trashIcon from "../../images/Trash.svg";
+import infoIcon from "../../images/Vectorheart.svg";
 
 function Card({ card, handleDeleteCard }) {
   function deleteCard() {
