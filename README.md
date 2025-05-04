@@ -1,4 +1,4 @@
- https://guilhermegalvaosilva.github.io/web_project_around_react/
+
 # Around The U.S. — Projeto React
 
 Este é um projeto de um site interativo de fotos, desenvolvido com **React** e configurado com **Vite**. A ideia principal é permitir que usuários editem seu perfil, adicionem e removam cartões com imagens, e visualizem as fotos em destaque.
