@@ -5,6 +5,7 @@ import likedIcon from "../../images/BlackHeart.svg"; // ícone preto (curtido)
 
 function Card({ card, handleDeleteCard }) {
   const [liked, setLiked] = useState(false); // começa como não curtido
+  const [isImageZoomed, setIsImageZoomed] = useState(false); // controla o zoom da imagem
 
   function deleteCard() {
     handleDeleteCard(card);
@@ -14,9 +15,19 @@ function Card({ card, handleDeleteCard }) {
     setLiked(!liked); // alterna entre true e false a cada clique
   }
 
+  function toggleImageZoom() {
+    setIsImageZoomed(!isImageZoomed); // alterna o estado de zoom
+  }
+
   return (
     <li className="card__content">
-      <img className="card__image" src={card.link} alt={card.name} />
+      <img
+        className={`card__image ${isImageZoomed ? "card__image--zoomed" : ""}`}
+        src={card.link}
+        alt={card.name}
+        onClick={toggleImageZoom}
+        style={{ cursor: "pointer", transition: "transform 0.3s" }}
+      />
       <img
         className="card__trash-icon"
         src={trashIcon}

@@ -22,6 +22,11 @@
   border-radius: 10px 10px 0px 0px;
   cursor: pointer;
 }
+.card__image--zoomed {
+  transform: scale(1.5); /* Amplia a imagem em 1.5x */
+  z-index: 10;
+  position: relative;
+}
 
 .card__trash-icon {
   position: absolute;
