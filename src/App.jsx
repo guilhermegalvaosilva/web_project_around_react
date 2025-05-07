@@ -4,6 +4,8 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import EditAvatar from "./components/EditAvatar/EditAvatar";
 import EditProfile from "./components/EditProfile/EditProfile";
+import ImagePopup from "./components/ImagePopup/ImagePopup";
+import Card from "./components/Card/Card";
 
 function App() {
   const [user, setUser] = useState({
@@ -47,6 +49,8 @@ function App() {
     },
   ]);
 
+  const [selectedCard, setSelectedCard] = useState(null);
+
   function handleOpenAddCard() {
     setIsAddCardOpen(true);
   }
@@ -55,9 +59,9 @@ function App() {
     setIsAddCardOpen(false);
   }
 
-  function handleDeleteCard(card) {
-    const filteredCards = cards.filter((c) => c._id !== card._id);
-    setCards(filteredCards);
+  function handleDeleteCard(cardId) {
+    const updatedCards = cards.filter((card) => card._id !== cardId);
+    setCards(updatedCards);
   }
 
   function handleEditUserPopup() {
@@ -77,6 +81,14 @@ function App() {
     setIsEditAvatarOpen(false);
   }
 
+  function handleCardClick(card) {
+    setSelectedCard(card);
+  }
+
+  function handleCloseImagePopup() {
+    setSelectedCard(null);
+  }
+
   return (
     <div className="page__content">
       <Header />
@@ -90,6 +102,7 @@ function App() {
         handleCloseAddCard={handleCloseAddCard}
         isAddCardOpen={isAddCardOpen}
         handleOpenEditAvatar={handleOpenEditAvatar}
+        onCardClick={handleCardClick}
       />
 
       <EditProfile
@@ -98,6 +111,11 @@ function App() {
         onUpdateUser={handleUpdateUserInfo}
       />
       <EditAvatar isOpen={isEditAvatarOpen} onClose={handleCloseEditAvatar} />
+
+      {selectedCard && (
+        <ImagePopup card={selectedCard} onClose={handleCloseImagePopup} />
+      )}
+
       <Footer />
     </div>
   );

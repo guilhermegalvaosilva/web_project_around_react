@@ -26,4 +26,3 @@ function Popup({ title, isOpen, onClose, children }) {
 }
 
 export default Popup;
-

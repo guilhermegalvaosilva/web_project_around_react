@@ -59,8 +59,8 @@ function Main({
 
       {hasCards ? (
         <ul className="cards-list">
-          {cards.map((card, index) => (
-            <Card key={index} card={card} handleDeleteCard={handleDeleteCard} />
+          {cards.map((card) => (
+            <Card key={card._id} card={card} onDelete={handleDeleteCard} />
           ))}
         </ul>
       ) : null}

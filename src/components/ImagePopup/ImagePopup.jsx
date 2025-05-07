@@ -1,18 +1,19 @@
-import closeIcon from "../../images/CloseIcon.svg";
+import React from "react";
 
-function ImagePopup() {
+function ImagePopup({ card, onClose }) {
   return (
-    <div className="imagepopup">
-      <div className="imagepopup__overlay">
-        <button className="imagepopup__close-button">
-          <img
-            className="imagepopup__close-icon"
-            src={closeIcon}
-            alt="duas retas cruzadas na diagonal formando a letra X"
-          />
+    <div className="popup popup_opened" onClick={onClose}>
+      <div className="popup__content" onClick={(e) => e.stopPropagation()}>
+        <button
+          className="popup__close-button"
+          onClick={onClose}
+          aria-label="Fechar"
+          type="button"
+        >
+          &times;
         </button>
-        <img className="imagepopup__image" alt="" />
-        <p className="imagepopup__title">Local Aqui</p>
+        <img className="popup__image" src={card.link} alt={card.name} />
+        <p className="popup__caption">{card.name}</p>
       </div>
     </div>
   );
