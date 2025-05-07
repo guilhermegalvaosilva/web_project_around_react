@@ -23,9 +23,18 @@
   cursor: pointer;
 }
 .card__image--zoomed {
-  transform: scale(1.5); /* Amplia a imagem em 1.5x */
-  z-index: 10;
-  position: relative;
+  position: fixed; /* Fixa na tela, não rola com a página */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza no centro exato da tela */
+  width: 55vw; /* Largura máxima: 75% da largura do viewport */
+  max-width: 55vw;
+  height: auto; /* Altura automática conforme o conteúdo */
+  max-height: 75vh; /* Altura máxima: 75% da altura do viewport */
+  overflow: auto; /* Adiciona rolagem interna se necessário */
+  padding: 20px;
+  z-index: 1000; /* Fica acima de outros elementos */
+  border-radius: 8px;
 }
 
 .card__trash-icon {
